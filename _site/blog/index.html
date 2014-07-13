@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <title>Blog &mdash; Weslley Neri</title>
+
+  <!-- Meta -->
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="HTML5, CSS3, JavaScript and other front-end stuff." />
+
+  <!-- Facebook -->
+  <meta property="og:title" content="Blog &mdash; Weslley Neri"/>
+  <meta property="og:site_name" content="Zeno Rocha"/>
+  <meta property="og:url" content="http://weslleyneri.com.br/blog/index.html"/>
+  <meta property="og:type" content="blog"/>
+  <meta property="og:description" content="HTML5, CSS3, JavaScript and other front-end stuff."/>
+
+  <!-- Twitter Analytics -->
+  <meta property="twitter:account_id" content="1510104138" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+
+  <!-- Font -->
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+
+  <!-- Feed -->
+  <link rel="alternate" type="application/rss+xml" href="">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/normalize.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/css/main.css?v=2" type="text/css" />
+
+  <!-- jQuery -->
+  <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+
+  <!-- Syntax Highlight -->
+  <link rel="stylesheet" type="text/css" href="http://media.zenorocha.com/pretiffy.css" />
+  <script src="http://media.zenorocha.com/pretiffy.js"></script>
+  <script src="http://media.zenorocha.com/pretiffy-lang-css.js"></script>
+
+  <!-- Main -->
+  <script src='/assets/js/main.js'></script>
+
+  <!-- Modernizr adding css classes -->
+  <script src='/assets/js/modernizr_css_classes.js'></script>
+
+</head>
+<body class="blog" onload="prettyPrint()">
+
+  <div id="masthead">
+
+<a href="/">
+<img src="http://gravatar.com/avatar/d9bcd3fc9ff84bbbb6e58c15aa98a659?s=200" title="Weslley Neri Imagem">
+  </a>
+
+  <h1 class="sitetitle">
+    <a href="/" class="sitetitle">Weslley Neri</a>
+  </h1>
+  <p class="description">Front/Back-End Developer</p>
+
+  <ul id="pagenav">
+    <li><a href="/">Sobre Mim</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/projects">Projetos</a></li>
+  </ul>
+
+  <ul class="social-links">
+    <li><a class="social-twitter" href="http://twitter.com/weslley_neri">Twitter</a></li>
+    <li><a class="social-facebook" href="http://www.facebook.com/weslley.neri.1">Facebook</a></li>
+    <li><a class="social-github" href="https://github.com/weslley39">Github</a></li>
+    <li><a class="social-email" href="mailto:weslley39@gmail.com">Email</a></li>
+  </ul>
+
+</div> <!--/masthead-->
+
+  <div class="container">
+
+  <div id="content">
+
+    
+
+    <ul id="posts">
+      
+      
+        <li class="post">
+        
+        <h2 class="posttitle"><a href="/hello-world/" class="articletitle">Hello World</a></h2>
+      <p class="date articledate">12/07/2014</p>
+        
+
+        
+        <p>Bom, depois de muito, mais muito tempo, após várias tentativas sem sucesso, EU CONSEGUI.</p>
+        <p><a href="/hello-world/">
+          
+          <strong>Continue lendo&#8230;</strong>
+          
+        </a></p>
+        
+        </li>
+      
+      
+    </ul>
+
+
+    <p class="pagination">
+    
+    <span class="newer">Anterior</span>
+    
+
+    <span>Página 1 de 1</span>
+    
+    <span class="older">Próxima</span>
+    
+    </p>
+
+  </div> <!--/content-->
+  </div> <!--/container-->
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4114546-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<!-- jQuery Infinite Scrolling -->
+<script type='text/javascript' src='/assets/js/jquery.infinitescroll.min.js'></script>
+<script>
+// infinitescroll() is called on the element that surrounds
+// the items you will be loading more of
+$('ul#posts').infinitescroll({
+  navSelector   : "p.pagination",
+          // selector for the paged navigation (it will be hidden)
+  nextSelector  : "p.pagination a.older",
+          // selector for the NEXT link (to page 2)
+  itemSelector  : "#content ul#posts li.post"
+          // selector for all items you'll retrieve
+});
+</script>
+
+<script type='text/javascript' src='/assets/js/fokus.min.js'></script>
+
+</body>
+</html>
