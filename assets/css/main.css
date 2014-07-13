@@ -405,7 +405,7 @@ ul#pagenav li a.active {
 }
 
 ul#pagenav li a.active:after {
-	content: ' You\0027re here';
+	content: ' Voc\00EA  esta aqui';
 	float: right;
 	color: #fff;
 }
