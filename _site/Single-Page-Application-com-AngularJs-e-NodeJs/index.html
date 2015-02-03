@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+
+  <title>Single Page Application com NodeJs e AngularJs &mdash; Weslley Neri</title>
+
+  <!-- Meta -->
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="" />
+
+  <!-- Facebook -->
+  <meta property="og:title" content="Single Page Application com NodeJs e AngularJs &mdash; Weslley Neri"/>
+  <meta property="og:site_name" content="Weslley Neri"/>
+  <meta property="og:url" content="http://weslleyneri.com.br/Single-Page-Application-com-AngularJs-e-NodeJs/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content=""/>
+
+  <!-- Twitter Analytics -->
+  <meta property="twitter:account_id" content="" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+
+  <!-- Font -->
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/normalize.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/css/main.css?v=2" type="text/css" />
+
+  <!-- jQuery -->
+  <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+
+  <!-- Syntax Highlight -->"\
+    <link rel="stylesheet" type="text/css" href="/assets/css/pretiffy.css"/>
+  <script src="/assets/js/pretiffy.js"></script>
+  <script src="/assets/js/pretiffy-lang-css.js"></script>
+
+  <!-- Main -->
+  <script src='/assets/js/main.js'></script>
+
+  <!-- Modernizr adding css classes -->
+  <script src='/assets/js/modernizr_css_classes.js'></script>
+
+</head>
+<body onload="prettyPrint()">
+
+  <div id="masthead">
+
+<a href="/">
+<img src="http://gravatar.com/avatar/d9bcd3fc9ff84bbbb6e58c15aa98a659?s=200" title="Weslley Neri Imagem">
+  </a>
+
+  <h1 class="sitetitle">
+    <a href="/" class="sitetitle">Weslley Neri</a>
+  </h1>
+  <p class="description">Front/Back-End Developer</p>
+
+  <ul id="pagenav">
+    <li><a href="/">Sobre Mim</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/projects">Projetos</a></li>
+  </ul>
+
+  <ul class="social-links">
+    <li><a class="social-twitter" href="http://twitter.com/weslley_neri">Twitter</a></li>
+    <li><a class="social-facebook" href="http://www.facebook.com/weslley.neri.1">Facebook</a></li>
+    <li><a class="social-github" href="https://github.com/weslley39">Github</a></li>
+    <li><a class="social-email" href="mailto:weslley39@gmail.com">Email</a></li>
+  </ul>
+
+</div> <!--/masthead-->
+
+  <div class="container">
+
+    <div id="content" class="post">
+
+    
+    <h1 class="posttitle">Single Page Application com NodeJs e AngularJs</h1>
+    <p class="date articledate">18/07/2014</p>
+    
+
+    <p>Bom como prometido, estou aqui para fazer o meu primeiro post verdadeiro, pois o outro, era somente um hello world</p>
+
+<p>Neste post, irei abordar sobre a hiper, mega, blaster, plus advanced linguagem chamada <a href="http://nodejs.org/">NodeJs</a> em conjunto com <a href="https://angularjs.org/">AngularJs</a> para construirmos uma Single Page Application (SPA)</p>
+<!-- more -->
+<h1 id="vamos_do_principio">Vamos do Principio</h1>
+
+<h2 id="mas_o_que_nodejs_">Mas, o que NodeJs ??</h2>
+
+<p>Node.js é uma plataforma construída sobre o motor JavaScript do Google Chrome para facilmente construir aplicações de rede rápidas e escaláveis. Node.js usa um modelo de I/O direcionada a evento não bloqueante que o torna leve e eficiente, ideal para aplicaões em tempo real com troca intensa de dados através de dispositivos distribuídos.</p>
+
+<h2 id="e_esse_tal_de_angularjs_">E esse tal de AngularJs ??</h2>
+
+<p>O Angular é um framework JavaScript mantido pelo Google e que vem ganhando cada vez mais adeptos para o desenvolvimento de aplicações WEB. Ele se enquadra nos modelos MVC(Model-view-controller), MVP(Model-view-presenter) e MVVM(Model View ViewModel), sendo considerado pelos seus desenvolvedores como um framework MVW (Model-View-Whatever), já que o foco do framework não é conceitos de separaão. AngularJS foi contruído para o desenvolvimento de aplicações espetaculares, como você verá adiante nesse artigo.</p>
+
+<p>Agora que você já sabe do que se trata, mãos a obra:</p>
+
+<h2 id="instalando_o_nodejs">Instalando o NodeJs</h2>
+
+<p>Como estou usando ambiente de desenvolvimento Unix, sendo um Linux, descreverei os passos seguintes para a instalação do node no mesmo, até porque o node não roda em seus 100% quando em ambiente RUWINDOWS.</p>
+
+<p>começaremos abrindo o terminal (CTRL + ALT + T), e logando como administrador</p>
+
+<pre class="bash"><code class="bash">$ sudo su</code></pre>
+
+<p>depois de digitado o comando e apertado a tecla Enter, o linux irá pedir seu usuario e senha, coloque e aperte enter novamente. Pronto, você esta logado como administrador.</p>
+
+<p>O Ubuntu oferece um sistema de gerenciamento de pacotes, e com ele podemos instalar pacotes pelo terminal, porem a sua lista de referência, ou seja, onde ele vai buscar esses pacotes, pode estar desatualizada, para atualizar devemos digitar no terminal:</p>
+
+<pre class="bash"><code class="bash">$ apt-get update</code></pre>
+
+<p>Depois de atualizadas as referências, com o comando apt-get seguido de install e o nome do pacote, então, digite:</p>
+
+<pre class="bash"><code class="bash">$ apt-get install nodejs</code></pre>
+
+<p>O node necessita de um gerenciador de pacotes, chamado NPM, para instala-lo, digite:</p>
+
+<pre class="bash"><code class="bash">$ apt-get install npm</code></pre>
+
+<p>Para ter certeza que o Node esta instalado:</p>
+
+<pre class="bash"><code class="bash">$ nodejs -v</code></pre>
+
+<p>Caso ele retorne com o numero da versao, então o Node foi instaldo com Sucesso!!</p>
+
+<p>Vamos a estrutura de nosso projeto:</p>
+
+<pre><code>Anguarl-SPA/
+├── public/
+│   ├── app/
+│   ├── controllers/
+│   └── js/
+├── views/
+│   └── *
+│</code></pre>
+
+<p>Depois de criar todas as pastas, parte chata, vamos para a parte legal da coisa, vamos criar nosso arquivo de package, para quando precisarmos rodar o projeto em outro lugar, ou mesmo em outra máquina o node já instale todas as referências necessárias.</p>
+
+<pre class="bash"><code class="bash">  nome do arquivo: package.json
+  
+  {
+  &quot;name&quot;: &quot;angular-SPA&quot;, //Nome do Projeto
+  &quot;version&quot;: &quot;0.0.1&quot;, // Versão do Projeto
+  &quot;description&quot;: &quot;A Single Page Applicatioion build with AngularJs&quot;, // Descrição do Projeto
+  &quot;author&quot;: &quot;Weslley Neri&quot;, //Nome do autor do Projeto
+  &quot;engines&quot;: { //Motores para a execução do projeto
+    &quot;node&quot;: &quot;0.10.24&quot;,
+    &quot;npm&quot;: &quot;1.2.30&quot;
+  },
+  &quot;dependencies&quot;: { //Depencias que o projeto tem para funcionar corretamente, como bibliotecas e etc
+    &quot;body-parser&quot;: &quot;^1.4.3&quot;,
+    &quot;express&quot;: &quot;^4.6.1&quot;
+  }
+}</code></pre>
+
+<p>depois de criado o arquivo, o node irá saber o que deve instalar e ter para rodar o projeto sem erros, então, estando dentro da pasta do package.json, digite:</p>
+
+<pre class="bash"><code class="bash">$ npm install</code></pre>
+
+<p>Este processo poderá demorar um pouco, dependendo da sua conexão com a internet. Depois de tudo instalado podemos começar a montar nosso código para rodar o servidor do node. vamos por partes. Se você já vem de alguma outra linguagem, na maioria delas, antes de começar a realmente fazer o seu código devemos, importar todas as bibliotecas/frameworks que iremos usar, no Node não é diferente, fazemos isto chamando a função require e passando como parâmetro o nome da biblioteca/framework, vamos a prática:</p>
+
+<pre class="javascript"><code class="javascript">  var express = require('express');
+  var bodyParser = require('body-parser');</code></pre>
+
+<p>No código acima, falamos para o nome que iremos utilizar um framework chamado <a href="http://expressjs.com/">ExpressJS</a>, que nada mais é do que um mínimo e flexivel framework para aplicação web, provendo um robusto conjunto de caracteristicas para a criação de uma única ou múlltiplas páginas, também estamos usando o <a href="https://github.com/expressjs/body-parser">Body Parser</a> que é um middleware para renderizar HTML.</p>
+
+    <a rel="author" style="visibility: hidden;" href="https://profiles.google.com/zno.rocha">Zeno Rocha</a>
+
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'weslleyneri',
+      disqus_url = '';
+
+  
+  disqus_url = "http://weslleyneri.com.br/Single-Page-Application-com-AngularJs-e-NodeJs/";
+  
+
+  (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+    </div> <!-- /content -->
+  </div> <!-- /container -->
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-52755728-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<!-- jQuery Infinite Scrolling -->
+<script type='text/javascript' src='/assets/js/jquery.infinitescroll.min.js'></script>
+<script>
+// infinitescroll() is called on the element that surrounds
+// the items you will be loading more of
+$('ul#posts').infinitescroll({
+  navSelector   : "p.pagination",
+          // selector for the paged navigation (it will be hidden)
+  nextSelector  : "p.pagination a.older",
+          // selector for the NEXT link (to page 2)
+  itemSelector  : "#content ul#posts li.post"
+          // selector for all items you'll retrieve
+});
+</script>
+
+<script type='text/javascript' src='/assets/js/fokus.min.js'></script>
+
+</body>
+</html>
