@@ -1,9 +1,9 @@
 # [weslleyneri.com.br](http://weslleyneri.com.br)
-Meu website pessoal aonde eu falo sobre desevolvimento front/back-end.
+Weslcome to my personal web/blog site, where i write about development.
 
-## Como isso funciona cara?
+## How this works dude?
 
-Calma, eu uso [Jekyll](http://jekyllrb.com/), que é um gerador de pagina estáticas em ruby.
+Easy, i use [Jekyll](http://jekyllrb.com/), that is a generator of static pages in ruby.
 
 ## Credits
 

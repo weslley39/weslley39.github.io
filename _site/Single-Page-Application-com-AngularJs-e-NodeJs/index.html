@@ -84,87 +84,105 @@
     <p>Bom como prometido, estou aqui para fazer o meu primeiro post verdadeiro, pois o outro, era somente um hello world</p>
 
 <p>Neste post, irei abordar sobre a hiper, mega, blaster, plus advanced linguagem chamada <a href="http://nodejs.org/">NodeJs</a> em conjunto com <a href="https://angularjs.org/">AngularJs</a> para construirmos uma Single Page Application (SPA)</p>
-<!-- more -->
-<h1 id="vamos_do_principio">Vamos do Principio</h1>
 
-<h2 id="mas_o_que_nodejs_">Mas, o que NodeJs ??</h2>
+<!-- more -->
+
+<h1 id="vamos-do-principio">Vamos do Principio</h1>
+
+<h2 id="mas-o-que-nodejs-">Mas, o que NodeJs ??</h2>
 
 <p>Node.js é uma plataforma construída sobre o motor JavaScript do Google Chrome para facilmente construir aplicações de rede rápidas e escaláveis. Node.js usa um modelo de I/O direcionada a evento não bloqueante que o torna leve e eficiente, ideal para aplicaões em tempo real com troca intensa de dados através de dispositivos distribuídos.</p>
 
-<h2 id="e_esse_tal_de_angularjs_">E esse tal de AngularJs ??</h2>
+<h2 id="e-esse-tal-de-angularjs-">E esse tal de AngularJs ??</h2>
 
 <p>O Angular é um framework JavaScript mantido pelo Google e que vem ganhando cada vez mais adeptos para o desenvolvimento de aplicações WEB. Ele se enquadra nos modelos MVC(Model-view-controller), MVP(Model-view-presenter) e MVVM(Model View ViewModel), sendo considerado pelos seus desenvolvedores como um framework MVW (Model-View-Whatever), já que o foco do framework não é conceitos de separaão. AngularJS foi contruído para o desenvolvimento de aplicações espetaculares, como você verá adiante nesse artigo.</p>
 
 <p>Agora que você já sabe do que se trata, mãos a obra:</p>
 
-<h2 id="instalando_o_nodejs">Instalando o NodeJs</h2>
-
+<h2 id="instalando-o-nodejs">Instalando o NodeJs</h2>
 <p>Como estou usando ambiente de desenvolvimento Unix, sendo um Linux, descreverei os passos seguintes para a instalação do node no mesmo, até porque o node não roda em seus 100% quando em ambiente RUWINDOWS.</p>
 
-<p>começaremos abrindo o terminal (CTRL + ALT + T), e logando como administrador</p>
+<p>começaremos abrindo o terminal (CTRL + ALT + T), e logando como administrador
+<code>bash
+$ sudo su
+</code>
+depois de digitado o comando e apertado a tecla Enter, o linux irá pedir seu usuario e senha, coloque e aperte enter novamente. Pronto, você esta logado como administrador.</p>
 
-<pre class="bash"><code class="bash">$ sudo su</code></pre>
-
-<p>depois de digitado o comando e apertado a tecla Enter, o linux irá pedir seu usuario e senha, coloque e aperte enter novamente. Pronto, você esta logado como administrador.</p>
-
-<p>O Ubuntu oferece um sistema de gerenciamento de pacotes, e com ele podemos instalar pacotes pelo terminal, porem a sua lista de referência, ou seja, onde ele vai buscar esses pacotes, pode estar desatualizada, para atualizar devemos digitar no terminal:</p>
-
-<pre class="bash"><code class="bash">$ apt-get update</code></pre>
+<p>O Ubuntu oferece um sistema de gerenciamento de pacotes, e com ele podemos instalar pacotes pelo terminal, porem a sua lista de referência, ou seja, onde ele vai buscar esses pacotes, pode estar desatualizada, para atualizar devemos digitar no terminal: 
+<code>bash
+$ apt-get update
+</code></p>
 
 <p>Depois de atualizadas as referências, com o comando apt-get seguido de install e o nome do pacote, então, digite:</p>
 
-<pre class="bash"><code class="bash">$ apt-get install nodejs</code></pre>
+<p><code>bash
+$ apt-get install nodejs
+</code></p>
 
-<p>O node necessita de um gerenciador de pacotes, chamado NPM, para instala-lo, digite:</p>
-
-<pre class="bash"><code class="bash">$ apt-get install npm</code></pre>
+<p>O node necessita de um gerenciador de pacotes, chamado NPM, para instala-lo, digite:
+<code>bash
+$ apt-get install npm
+</code></p>
 
 <p>Para ter certeza que o Node esta instalado:</p>
 
-<pre class="bash"><code class="bash">$ nodejs -v</code></pre>
+<p><code>bash
+$ nodejs -v
+</code></p>
 
 <p>Caso ele retorne com o numero da versao, então o Node foi instaldo com Sucesso!!</p>
 
 <p>Vamos a estrutura de nosso projeto:</p>
 
-<pre><code>Anguarl-SPA/
+<p><code>
+Anguarl-SPA/
 ├── public/
 │   ├── app/
 │   ├── controllers/
 │   └── js/
 ├── views/
 │   └── *
-│</code></pre>
+│
+</code></p>
 
 <p>Depois de criar todas as pastas, parte chata, vamos para a parte legal da coisa, vamos criar nosso arquivo de package, para quando precisarmos rodar o projeto em outro lugar, ou mesmo em outra máquina o node já instale todas as referências necessárias.</p>
 
-<pre class="bash"><code class="bash">  nome do arquivo: package.json
-  
-  {
-  &quot;name&quot;: &quot;angular-SPA&quot;, //Nome do Projeto
-  &quot;version&quot;: &quot;0.0.1&quot;, // Versão do Projeto
-  &quot;description&quot;: &quot;A Single Page Applicatioion build with AngularJs&quot;, // Descrição do Projeto
-  &quot;author&quot;: &quot;Weslley Neri&quot;, //Nome do autor do Projeto
-  &quot;engines&quot;: { //Motores para a execução do projeto
-    &quot;node&quot;: &quot;0.10.24&quot;,
-    &quot;npm&quot;: &quot;1.2.30&quot;
+<p>```bash
+  nome do arquivo: package.json</p>
+
+<p>{
+  “name”: “angular-SPA”, //Nome do Projeto
+  “version”: “0.0.1”, // Versão do Projeto
+  “description”: “A Single Page Applicatioion build with AngularJs”, // Descrição do Projeto
+  “author”: “Weslley Neri”, //Nome do autor do Projeto
+  “engines”: { //Motores para a execução do projeto
+    “node”: “0.10.24”,
+    “npm”: “1.2.30”
   },
-  &quot;dependencies&quot;: { //Depencias que o projeto tem para funcionar corretamente, como bibliotecas e etc
-    &quot;body-parser&quot;: &quot;^1.4.3&quot;,
-    &quot;express&quot;: &quot;^4.6.1&quot;
+  “dependencies”: { //Depencias que o projeto tem para funcionar corretamente, como bibliotecas e etc
+    “body-parser”: “^1.4.3”,
+    “express”: “^4.6.1”
   }
-}</code></pre>
+}
+```</p>
 
 <p>depois de criado o arquivo, o node irá saber o que deve instalar e ter para rodar o projeto sem erros, então, estando dentro da pasta do package.json, digite:</p>
 
-<pre class="bash"><code class="bash">$ npm install</code></pre>
+<p><code>bash
+$ npm install
+</code></p>
 
-<p>Este processo poderá demorar um pouco, dependendo da sua conexão com a internet. Depois de tudo instalado podemos começar a montar nosso código para rodar o servidor do node. vamos por partes. Se você já vem de alguma outra linguagem, na maioria delas, antes de começar a realmente fazer o seu código devemos, importar todas as bibliotecas/frameworks que iremos usar, no Node não é diferente, fazemos isto chamando a função require e passando como parâmetro o nome da biblioteca/framework, vamos a prática:</p>
+<p>Este processo poderá demorar um pouco, dependendo da sua conexão com a internet. Depois de tudo instalado podemos começar a montar nosso código para rodar o servidor do node. vamos por partes.
+Se você já vem de alguma outra linguagem, na maioria delas, antes de começar a realmente fazer o seu código devemos, importar todas as bibliotecas/frameworks que iremos usar, no Node não é diferente, fazemos isto chamando a função require e passando como parâmetro o nome da biblioteca/framework, vamos a prática:</p>
 
-<pre class="javascript"><code class="javascript">  var express = require('express');
-  var bodyParser = require('body-parser');</code></pre>
+<p><code>javascript
+  var express = require('express');
+  var bodyParser = require('body-parser');
+</code></p>
 
 <p>No código acima, falamos para o nome que iremos utilizar um framework chamado <a href="http://expressjs.com/">ExpressJS</a>, que nada mais é do que um mínimo e flexivel framework para aplicação web, provendo um robusto conjunto de caracteristicas para a criação de uma única ou múlltiplas páginas, também estamos usando o <a href="https://github.com/expressjs/body-parser">Body Parser</a> que é um middleware para renderizar HTML.</p>
+
+
 
     <a rel="author" style="visibility: hidden;" href="https://profiles.google.com/zno.rocha">Zeno Rocha</a>
 
@@ -187,20 +205,33 @@
     </div> <!-- /content -->
   </div> <!-- /container -->
 
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-52755728-1']);
-  _gaq.push(['_trackPageview']);
-
+<!-- Inspectlet -->
+<script>
+  window.__insp = window.__insp || [];
+  __insp.push(['wid', 772378335]);
   (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+    if (window.attachEvent){
+      window.attachEvent('onload', __ldinsp);
+    }else{
+      window.addEventListener('load', __ldinsp, false);
+    }
   })();
 </script>
 
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52755728-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
 <!-- jQuery Infinite Scrolling -->
-<script type='text/javascript' src='/assets/js/jquery.infinitescroll.min.js'></script>
+<script src='/assets/js/jquery.infinitescroll.min.js'></script>
 <script>
 // infinitescroll() is called on the element that surrounds
 // the items you will be loading more of
@@ -214,7 +245,7 @@ $('ul#posts').infinitescroll({
 });
 </script>
 
-<script type='text/javascript' src='/assets/js/fokus.min.js'></script>
+<script src='/assets/js/fokus.min.js'></script>
 
 </body>
 </html>

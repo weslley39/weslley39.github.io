@@ -1,17 +1,30 @@
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-52755728-1']);
-  _gaq.push(['_trackPageview']);
-
+<!-- Inspectlet -->
+<script>
+  window.__insp = window.__insp || [];
+  __insp.push(['wid', 772378335]);
   (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+    if (window.attachEvent){
+      window.attachEvent('onload', __ldinsp);
+    }else{
+      window.addEventListener('load', __ldinsp, false);
+    }
   })();
 </script>
 
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52755728-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
 <!-- jQuery Infinite Scrolling -->
-<script type='text/javascript' src='{{ site.baseurl }}assets/js/jquery.infinitescroll.min.js'></script>
+<script src='{{ site.baseurl }}assets/js/jquery.infinitescroll.min.js'></script>
 <script>
 // infinitescroll() is called on the element that surrounds
 // the items you will be loading more of
@@ -25,7 +38,7 @@ $('ul#posts').infinitescroll({
 });
 </script>
 
-<script type='text/javascript' src='{{ site.baseurl }}assets/js/fokus.min.js'></script>
+<script src='{{ site.baseurl }}assets/js/fokus.min.js'></script>
 
 </body>
 </html>
