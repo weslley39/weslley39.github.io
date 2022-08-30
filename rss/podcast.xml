@@ -27,7 +27,7 @@
 		<itunes:image href="https://user-images.githubusercontent.com/5286092/187322098-b5bb7de1-445b-4efd-8c38-2a5b90f54f61.jpeg"/>
 		<item>
 			<title><![CDATA[Book 1]]></title>
-			<description><![CDATA[<p>Book1</p>]]></description>
+			<description><![CDATA[<p>Book 1</p>]]></description>
 			<link>https://user-images.githubusercontent.com/5286092/187435973-76b51e99-df0b-4bc3-8a89-1da1af6d9d7e.jpg</link>
 			<guid isPermaLink="false">4188303521</guid>
 			<dc:creator><![CDATA[Weslley Neri]]></dc:creator>
@@ -43,13 +43,13 @@
 		</item>
 		<item>
 			<title><![CDATA[Book 2]]></title>
-			<description><![CDATA[<p>Book 2</p>]]></description>
+			<description><![CDATA[<p>Boook 2</p>]]></description>
 			<link>https://user-images.githubusercontent.com/5286092/187436087-bcddce7c-8544-40d5-a9cd-92767ba639af.jpg</link>
 			<guid isPermaLink="false">3849716616</guid>
 			<dc:creator><![CDATA[Weslley Neri]]></dc:creator>
-			<pubDate>Mon, 30 Aug 2022 09:32:51 GMT</pubDate>
+			<pubDate>Mon, 30 Aug 2022 09:38:51 GMT</pubDate>
 			<enclosure url="https://arc10.weslley39.workers.dev/0:/Will%20Larson%20-%20Staff%20Engineer,%20Leadership%20Beyond%20the%20Management%20Track.m4b" length="506000000" type="audio/x-m4b"/>
-			<itunes:summary>Book 2</itunes:summary>
+			<itunes:summary>Boook 2</itunes:summary>
 			<itunes:explicit>No</itunes:explicit>
 			<itunes:duration>08:52:25</itunes:duration>
 			<itunes:image href="https://user-images.githubusercontent.com/5286092/187436087-bcddce7c-8544-40d5-a9cd-92767ba639af.jpg"/>
