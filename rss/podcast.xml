@@ -8,13 +8,11 @@
 			<title>Weslley BookClub</title>
 			<link>http://weslleyneri.com.br/rss/podcast.xml</link>
 		</image>
-		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Mon, 29 Aug 2022 18:23:30 GMT</lastBuildDate>
+		<lastBuildDate>Mon, 30 Aug 2022 09:30:30 GMT</lastBuildDate>
 		<atom:link href="http://weslleyneri.com.br/rss/podcast.xml" rel="self" type="application/rss+xml"/>
 		<author><![CDATA[Weslley Neri]]></author>
 		<copyright><![CDATA[Weslley Neri]]></copyright>
 		<language><![CDATA[pt-br]]></language>
-		<atom:link rel="hub" href="https://pubsubhubbub.appspot.com/"/>
 		<itunes:author>Weslley Neri</itunes:author>
 		<itunes:summary>Weslley&apos;s BookClub will delivery a brief introduction of books that was already read by weslley</itunes:summary>
 		<itunes:type>episodic</itunes:type>
@@ -28,24 +26,36 @@
 		</itunes:category>
 		<itunes:image href="https://user-images.githubusercontent.com/5286092/187322098-b5bb7de1-445b-4efd-8c38-2a5b90f54f61.jpeg"/>
 		<item>
-			<title><![CDATA[The Pragmatic Programmer 20th Anniversary Edition, 2nd Edition Your Journey to Mastery]]></title>
-			<description><![CDATA[<p>The Pragmatic Programmer is one of those rare tech audiobooks you’ll listen, re-listen, and listen to again over the years. Whether you’re new to the field or an experienced practitioner, you’ll come away with fresh insights each and every time. </p>
-]]></description>
-			<link>https://user-images.githubusercontent.com/5286092/187322098-b5bb7de1-445b-4efd-8c38-2a5b90f54f61.jpeg</link>
+			<title><![CDATA[Book 1]]></title>
+			<description><![CDATA[<p>Book1</p>]]></description>
+			<link>https://user-images.githubusercontent.com/5286092/187435973-76b51e99-df0b-4bc3-8a89-1da1af6d9d7e.jpg</link>
 			<guid isPermaLink="false">4188303521</guid>
 			<dc:creator><![CDATA[Weslley Neri]]></dc:creator>
 			<pubDate>Mon, 29 Aug 2022 12:22:51 GMT</pubDate>
 			<enclosure url="https://arc10.weslley39.workers.dev/0:/The%20Pragmatic%20Programmer%2020th%20Anniversary%20Edition,%202nd%20Edition%20Your%20Journey%20to%20Mastery.m4b" length="567000000" type="audio/x-m4b"/>
+			<itunes:summary>Book 1</itunes:summary>
+			<itunes:explicit>No</itunes:explicit>
+			<itunes:duration>09:55:25</itunes:duration>
+			<itunes:image href="https://user-images.githubusercontent.com/5286092/187435973-76b51e99-df0b-4bc3-8a89-1da1af6d9d7e.jpg"/>
+			<itunes:season>1</itunes:season>
+			<itunes:episode>1</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
 		</item>
 		<item>
-			<title><![CDATA[The Pragmatic Programmer 20th Anniversary - 2nd Edition]]></title>
-			<description><![CDATA[<p>The Pragmatic Programmer is one of those rare tech audiobooks you’ll listen, re-listen, and listen to again over the years. Whether you’re new to the field or an experienced practitioner, you’ll come away with fresh insights each and every time. </p>
-]]></description>
-			<link>https://user-images.githubusercontent.com/5286092/187322098-b5bb7de1-445b-4efd-8c38-2a5b90f54f61.jpeg</link>
+			<title><![CDATA[Book 2]]></title>
+			<description><![CDATA[<p>Book 2</p>]]></description>
+			<link>https://user-images.githubusercontent.com/5286092/187436087-bcddce7c-8544-40d5-a9cd-92767ba639af.jpg</link>
 			<guid isPermaLink="false">3849716616</guid>
 			<dc:creator><![CDATA[Weslley Neri]]></dc:creator>
-			<pubDate>Mon, 29 Aug 2022 18:22:51 GMT</pubDate>
-			<enclosure url="https://arc10.weslley39.workers.dev/0:/The%20Pragmatic%20Programmer%2020th%20Anniversary%20Edition,%202nd%20Edition%20Your%20Journey%20to%20Mastery.m4b" length="567000000" type="audio/x-m4b"/>
+			<pubDate>Mon, 30 Aug 2022 09:22:51 GMT</pubDate>
+			<enclosure url="https://arc10.weslley39.workers.dev/0:down/Will%20Larson%20-%20Staff%20Engineer,%20Leadership%20Beyond%20the%20Management%20Track.m4b" length="506000000" type="audio/x-m4b"/>
+			<itunes:summary>Book 2</itunes:summary>
+			<itunes:explicit>No</itunes:explicit>
+			<itunes:duration>08:52:25</itunes:duration>
+			<itunes:image href="https://user-images.githubusercontent.com/5286092/187436087-bcddce7c-8544-40d5-a9cd-92767ba639af.jpg"/>
+			<itunes:season>1</itunes:season>
+			<itunes:episode>2</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
 		</item>
 	</channel>
 </rss>
