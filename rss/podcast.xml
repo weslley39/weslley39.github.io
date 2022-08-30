@@ -8,7 +8,7 @@
 			<title>Weslley BookClub</title>
 			<link>http://weslleyneri.com.br/rss/podcast.xml</link>
 		</image>
-		<lastBuildDate>Mon, 30 Aug 2022 09:30:30 GMT</lastBuildDate>
+		<lastBuildDate>Mon, 30 Aug 2022 09:32:30 GMT</lastBuildDate>
 		<atom:link href="http://weslleyneri.com.br/rss/podcast.xml" rel="self" type="application/rss+xml"/>
 		<author><![CDATA[Weslley Neri]]></author>
 		<copyright><![CDATA[Weslley Neri]]></copyright>
@@ -47,8 +47,8 @@
 			<link>https://user-images.githubusercontent.com/5286092/187436087-bcddce7c-8544-40d5-a9cd-92767ba639af.jpg</link>
 			<guid isPermaLink="false">3849716616</guid>
 			<dc:creator><![CDATA[Weslley Neri]]></dc:creator>
-			<pubDate>Mon, 30 Aug 2022 09:22:51 GMT</pubDate>
-			<enclosure url="https://arc10.weslley39.workers.dev/0:down/Will%20Larson%20-%20Staff%20Engineer,%20Leadership%20Beyond%20the%20Management%20Track.m4b" length="506000000" type="audio/x-m4b"/>
+			<pubDate>Mon, 30 Aug 2022 09:32:51 GMT</pubDate>
+			<enclosure url="https://arc10.weslley39.workers.dev/0:/Will%20Larson%20-%20Staff%20Engineer,%20Leadership%20Beyond%20the%20Management%20Track.m4b" length="506000000" type="audio/x-m4b"/>
 			<itunes:summary>Book 2</itunes:summary>
 			<itunes:explicit>No</itunes:explicit>
 			<itunes:duration>08:52:25</itunes:duration>
