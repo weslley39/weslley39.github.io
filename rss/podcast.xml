@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:anchor="https://anchor.fm/xmlns">
+	<channel>
+		<title><![CDATA[Weslley BookClub]]></title>
+		<description><![CDATA[Weslley BookClub will delivery a brief introduction of books that was already read by weslley]]></description>
+		<link>http://weslleyneri.com.br/rss/podcast.xml</link>
+		<image>
+			<url>https://user-images.githubusercontent.com/5286092/187322098-b5bb7de1-445b-4efd-8c38-2a5b90f54f61.jpeg</url>
+			<title>Weslley BookClub</title>
+			<link>http://weslleyneri.com.br/rss/podcast.xml</link>
+		</image>
+		<generator>Anchor Podcasts</generator>
+		<lastBuildDate>Mon, 29 Aug 2022 12:23:30 GMT</lastBuildDate>
+		<atom:link href="http://weslleyneri.com.br/rss/podcast.xml" rel="self" type="application/rss+xml"/>
+		<author><![CDATA[Weslley Neri]]></author>
+		<copyright><![CDATA[Weslley Neri]]></copyright>
+		<language><![CDATA[pt-br]]></language>
+		<atom:link rel="hub" href="https://pubsubhubbub.appspot.com/"/>
+		<itunes:author>Weslley Neri</itunes:author>
+		<itunes:summary>Weslley&apos;s BookClub will delivery a brief introduction of books that was already read by weslley</itunes:summary>
+		<itunes:type>episodic</itunes:type>
+		<itunes:owner>
+			<itunes:name>Weslley Neri</itunes:name>
+			<itunes:email>weslley39@gmail.com</itunes:email>
+		</itunes:owner>
+		<itunes:explicit>No</itunes:explicit>
+		<itunes:category text="Arts">
+			<itunes:category text="Books"/>
+		</itunes:category>
+		<itunes:image href="https://user-images.githubusercontent.com/5286092/187322098-b5bb7de1-445b-4efd-8c38-2a5b90f54f61.jpeg"/>
+		<item>
+			<title><![CDATA[The Pragmatic Programmer 20th Anniversary Edition, 2nd Edition Your Journey to Mastery]]></title>
+			<description><![CDATA[<p>The Pragmatic Programmer is one of those rare tech audiobooks you’ll listen, re-listen, and listen to again over the years. Whether you’re new to the field or an experienced practitioner, you’ll come away with fresh insights each and every time. </p>
+]]></description>
+			<link>https://user-images.githubusercontent.com/5286092/187322098-b5bb7de1-445b-4efd-8c38-2a5b90f54f61.jpeg</link>
+			<guid isPermaLink="false">4088aae5-2d8c-4b33-ade6-8a8dffda3c78</guid>
+			<dc:creator><![CDATA[Weslley Neri]]></dc:creator>
+			<pubDate>Mon, 29 Aug 2022 12:22:51 GMT</pubDate>
+			<enclosure url="https://public.boxcloud.com/d/1/b1!zjsx4NRzhwBH4zU2ehshMpT-f2ma2URY5eERq48OgVhoyUoyImGBC7QBUqHMVrmhkubdNOkNQAShE5xkgWzN0Pr7ovOSiHHHSzRCXb9s3OMccW3G9kfPngMp_WtuWuIISJTrJdWlM9T7OzAPkE7VVOxaAvgxkxpirSiTx8jmewFWBdsbPO1ZbJMptDZSPZAdmFJBNfcBVRYre-GRL9aIbuLMYnebnIfTits41LoEHHwaXwTNCUVW-kCM74XON_RrWHC1XtJq-T9aBTp8icrI0azKKiKf2eCMQ5OSkZxeuU8kN01al1_BcN5zjFqMhw20sDWlGisoTIjPFYz9kX_a5Ept2obJZzUyQsYKsr9On_f9V3c3Gx57VHG3egPLwZ2lflYR5Lg2vwcYhMrE_lPAGxLw9xyCjz7G0tHy52OAQtDB7j4xF-OT8yxktKC1qrFbnBUuGgp_mcys-qkoFjOf0AaW_gH4UG1c-DHciFuOFUlVKCwLR1Ov6SmztkGKL4JQWporP5HG8Lf8wmo-nT7OqsN1o3VlnbRmcXRxDpNPoFRX2-ZFZsMkEGBRd7Y_v-jIpLpTikq2Axc-lnbSivhT4DcI6WuV_UeZm9BDLIUL5CGALS61klpJpBKknzovf7k_UGhySTFbqtHx-DQSx2dHF-v71ePX3pq4bdlOBXxMq_nUZveEEsR8CdQ2Y5ZZP_deqMIWPd7WWjdDpWJ7omxE3_gqejMSpf7Fb-60b1ehX6d2t5Rn90xEwAIN9s3v3UX5zkw8ha3Zb37ubeTvD9aZTnyhpxHDo0Q3x1JqhYsxsR9PioxG8UMvYESBvOjZ9yJPtlh48xv8L5OvN1-XW0soHLA52yOkSmLz3j1qr4jOIAGUCYMC8mTsDXKA0g9gcQKqJzkb2PhAJiZL2DqgVbOiAeJqM2s0JnGsggri7BdnzzdKhL-HLqi6DUO3g2UbCaYGBsBdWG2rn4Tz1jbgcG9WArVsJc8CBqi2oyDDPMcn5X7aYmSMtb0QN_812CU1qMohWpS0ULW497_m6zo5IRsy_6-tDox7GmK2uR-tIyFZ5j9NyxnXgDpg5uqhp7YnGPCUZIbdeGqZ9CyBe5Yu2zhKp1OSZktkb5YI8wkkVo25yset9mQoJtPCMtZGnGccXmNpps3eXM6nXt95ryv6C0oowxpm8uk1FClcvMnBQFrm3GL1VXXfrkvPvEGBWb7-m6hPkma167rAOJ4LT2ES354HdJ-oHr6S-9vIcR4m4Mc8vuGy1lhugsUDdqxl2WkDAXcTXuKr4nvXzBdedSjs04Wahx4HAvH9dvIwLoSS7c2IahqElNrGldaCl3Icwv4qbvNqPrPLX4W-zeBDTDtyb1PEl3n1iqr58v9jUY4OQ-qGDm6ooFRH-lQaruIpo4XkQi1tb6ppPiZf_Nkawy27891UqQQVRnAlJr30ghy_-DmHoK0jjZB_LkoB-fAi9Xmyt_EzScaM8Mgp5Jkzswuz7M_aZC0V3MSWscRB0Yq8fLjK8pV6ThYeLSlSE1XzpB67exnhzNFj_Z2PLq3d2Js1yET87LD3zme7UDv9PT1q/download" length="419884" type="audio/x-m4a"/>
+		</item>
+	</channel>
+</rss>
