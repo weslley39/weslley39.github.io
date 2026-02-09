@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo:*)",
+      "WebFetch(domain:dss03.framer.website)",
+      "WebSearch",
+      "WebFetch(domain:joshcollinsworth.com)"
+    ]
+  }
+}
