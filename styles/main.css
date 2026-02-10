@@ -1,1 +1,703 @@
-@font-face{font-family:Neuzeit Grotesk Bold;src:url(/fonts/NeuzeitGrotesk-Bold.woff2) format("woff2"),url(/fonts/NeuzeitGrotesk-Bold.woff) format("woff");font-weight:400;font-style:normal}@font-face{font-family:Poppins Light;src:url(/fonts/Poppins-Light.woff2) format("woff2"),url(/fonts/Poppins-Light.woff) format("woff");font-weight:400;font-style:normal}@font-face{font-family:Poppins Bold;src:url(/fonts/Poppins-Bold.woff2) format("woff2"),url(/fonts/Poppins-Bold.woff) format("woff");font-weight:400;font-style:normal}@font-face{font-family:Proxima Nova Regular;src:url(/fonts/ProximaNova-Regular.woff2) format("woff2"),url(/fonts/ProximaNova-Regular.woff) format("woff");font-weight:400;font-style:normal}@font-face{font-family:Verveine Regular;src:url(/fonts/Verveine-Regular.woff2) format("woff2"),url(/fonts/Verveine-Regular.woff) format("woff");font-weight:400;font-style:normal}body,html{margin:0;padding:0;-webkit-font-smoothing:antialiased}.p-name{font-family:Neuzeit Grotesk Bold,sans-serif;position:absolute;background-color:#0c0d0e;color:#fff;width:50%;height:10%;margin-top:0;padding:16px 20px;font-size:23px;font-weight:300}.header{transform:skewY(-4deg);background-color:#141618;height:100vh;min-height:600px;width:100%;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;position:relative;-ms-flex-direction:column;flex-direction:column}.header .title{transform:skewY(4deg);color:#fff;margin:59px auto 0;position:relative;z-index:3;font-size:60px;line-height:80px;font-family:Neuzeit Grotesk Bold,sans-serif;margin-top:.5em}@media (max-width:768px){.header .title{font-size:2.2em}}.subtitle{color:#fff;font-size:16px;font-family:Poppins Light,sans-serif;font-weight:300;text-transform:uppercase;text-align:center}.header .subtitle{position:absolute;bottom:20px;z-index:2;margin:0;width:100%}.content{padding:0 20px 30px;margin:90px auto;max-width:700px;font-family:Proxima Nova Regular,sans-serif;font-size:20px;line-height:36px;color:#3b3b3b}.content .title{color:#000;margin:160px auto 0;max-width:none;font-size:48px;line-height:60px}.content .subtitle{color:#000;font-size:16px;margin:0 0 60px}.content p{margin:21px 0}.gradient{background-image:linear-gradient(180deg,rgba(0,0,0,.7),transparent 50%,transparent 90%,rgba(0,0,0,.7));z-index:2}.gradient,.image{background-attachment:fixed;position:absolute;width:100%;height:100%;top:0;left:0}.image{background-color:#000;background-repeat:no-repeat;background-position:50%;background-size:cover;opacity:.4;z-index:1}footer{bottom:0;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;font-weight:300;font-family:Poppins Light,sans-serif;font-size:12px;min-height:40px;-ms-flex-wrap:wrap;flex-wrap:wrap;transition:background-color .3s ease;will-change:transform;z-index:1}footer,footer:before{position:fixed;width:100%}footer:before{content:"";background-color:#000;transform:skewY(-4deg);height:130px;display:block;bottom:-3px;z-index:-1}footer li{display:inline-block;margin-right:1em}footer ul{list-style:none;padding:20px 0 0 36px;margin:0 auto;padding-bottom:20px}footer ul:before{content:"";position:absolute;background-color:#000;width:100%;height:130px;bottom:-8px;transform:skewY(-4deg)}footer ul a{display:block;background-color:#ddd;width:36px;height:36px}footer ul a.icon{background:url(/images/icons.png) no-repeat;opacity:.4;transition:opacity .3s ease;-o-transition:opacity .3s ease;-ms-transition:opacity .3s ease;-moz-transition:opacity .3s ease;-khtml-transition:opacity .3s ease;-webkit-transition:opacity .3s ease}footer ul a.icon.twitter{height:25px;background-position:left -6px}footer ul a.icon.twitter:hover{background-position:right -6px;opacity:.6}footer ul a.icon.lastfm{height:19px;background-position:left -45px}footer ul a.icon.lastfm:hover{background-position:right -45px;opacity:.6}footer ul a.icon.linkedin{height:27px;background-position:left -77px}footer ul a.icon.linkedin:hover{background-position:right -77px;opacity:.6}footer ul a.icon.facebook{height:31px;background-position:left -111px}footer ul a.icon.facebook:hover{background-position:right -111px;opacity:.6}footer ul a.icon.googleplus{height:23px;background-position:left -152px}footer ul a.icon.googleplus:hover{background-position:right -152px;opacity:.6}footer ul a.icon.speakerdeck{height:18px;background-position:left -190px}footer ul a.icon.speakerdeck:hover{background-position:right -190px;opacity:.6}footer ul a.icon.github{background-position:left -219px}footer ul a.icon.github:hover{background-position:right -219px}footer ul a.icon.coderwall{height:25px;background-position:left -258px}footer ul a.icon.coderwall:hover{background-position:right -258px;opacity:.6}footer ul a.icon.email{height:27px;background-position:left -294px}footer ul a.icon.email:hover{background-position:right -294px;opacity:.6}footer ul a.icon.blog{height:31px;background-position:left -327px}footer ul a.icon.blog:hover{background-position:right -327px;opacity:.6}footer ul a.icon.github{height:31px;background-position:left -426px}footer ul a.icon.github:hover{background-position:right -426px;opacity:.6}@media (max-width:768px){footer ul a.icon.github{background-position:right -426px;opacity:.9}footer ul a.icon.twitter{background-position:right -6px;opacity:.9}footer ul a.icon.linkedin{background-position:right -77px;opacity:.9}footer ul a.icon.speakerdeck{background-position:right -190px;opacity:.9}footer ul a.icon.blog{background-position:right -327px;opacity:.9}footer ul a.icon.email{background-position:right -294px;opacity:.9}}
+/* ==========================================================================
+   Weslley Neri - Portfolio
+   Full-screen Bento Grid | Roboto Mono | Minimalist Light Mode
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Design Tokens: Color System
+   -------------------------------------------------------------------------- */
+:root {
+  color-scheme: light dark;
+
+  /* Core */
+  --color-bg: #ffffff;
+  --color-text: #000;
+
+  /* Borders & Lines */
+  --color-border: rgba(0, 0, 0, 0.15);
+  --color-edge-emphasis: rgba(0, 0, 0, 0.06);
+  --color-edge-emphasis-hover: rgba(0, 0, 0, 0.18);
+
+  /* Interactive */
+  --color-corner-hover: rgba(0, 0, 0, 0.025);
+  --color-corner-active: rgba(0, 0, 0, 0.05);
+
+  /* Profile */
+  --color-profile-bg: rgba(0, 0, 0, 0.012);
+  --color-avatar-bg: rgba(0, 0, 0, 0.04);
+  --color-crosshair: rgba(0, 0, 0, 0.25);
+
+  /* Selection */
+  --color-selection-bg: rgba(0, 0, 0, 0.08);
+  --color-selection-text: #000;
+
+  /* Opacity tokens */
+  --opacity-icon: 0.6;
+  --opacity-bio: 0.55;
+  --opacity-title: 0.6;
+  --opacity-contact: 0.8;
+  --opacity-label: 0.7;
+  --opacity-arrow-hover: 0.85;
+  --opacity-crosshair: 0.8;
+
+  /* Profile image */
+  --img-grayscale: 100%;
+  --img-contrast: 1.1;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-bg: #0e0e10;
+  --color-text: #e8e6e3;
+
+  --color-border: rgba(255, 255, 255, 0.10);
+  --color-edge-emphasis: rgba(255, 255, 255, 0.05);
+  --color-edge-emphasis-hover: rgba(255, 255, 255, 0.14);
+
+  --color-corner-hover: rgba(255, 255, 255, 0.03);
+  --color-corner-active: rgba(255, 255, 255, 0.06);
+
+  --color-profile-bg: rgba(255, 255, 255, 0.02);
+  --color-avatar-bg: rgba(255, 255, 255, 0.04);
+  --color-crosshair: rgba(255, 255, 255, 0.22);
+
+  --color-selection-bg: rgba(255, 255, 255, 0.12);
+  --color-selection-text: #e8e6e3;
+
+  --opacity-icon: 0.5;
+  --opacity-bio: 0.45;
+  --opacity-title: 0.5;
+  --opacity-contact: 0.7;
+  --opacity-label: 0.6;
+  --opacity-arrow-hover: 0.75;
+  --opacity-crosshair: 0.7;
+
+  --img-grayscale: 100%;
+  --img-contrast: 1.05;
+}
+
+/* --------------------------------------------------------------------------
+   Reset & Base
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3em;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Bento Grid - Full Viewport
+   -------------------------------------------------------------------------- */
+.bento-grid {
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  grid-template-rows: 120px 1fr 120px;
+  width: 100vw;
+  height: 100vh;
+  background: var(--color-bg);
+}
+
+/* --------------------------------------------------------------------------
+   Cell Base
+   -------------------------------------------------------------------------- */
+.cell {
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Last column: no right border */
+.cell-corner--tr,
+.cell-corner--br,
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:nth-child(9) {
+  border-right: none;
+}
+
+/* Last row: no bottom border */
+.cell-corner--bl,
+.cell-corner--br,
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) {
+  border-bottom: none;
+}
+
+/* Empty cells */
+.cell-empty {
+  background: transparent;
+}
+
+/* --------------------------------------------------------------------------
+   Corner Cells - Shared
+   Animation: "Scale + Fade In-Place Swap"
+   On hover, the main icon fades out while scaling down; the arrow fades in
+   while scaling up — both centered in the exact same spot. Creates a
+   seamless "icon morphs into arrow" effect.
+   -------------------------------------------------------------------------- */
+.cell-corner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: var(--color-text);
+}
+
+.cell-corner:hover {
+  background-color: var(--color-corner-hover);
+}
+
+/* Active: deeper press feedback */
+.cell-corner:active {
+  background-color: var(--color-corner-active);
+  transition: background-color 0.08s ease;
+}
+
+/* Corner edge emphasis line */
+.cell-corner::before {
+  content: '';
+  position: absolute;
+  background: var(--color-edge-emphasis);
+  transition: background 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 1;
+}
+
+.cell-corner--tl::before { top: 0; left: 0; width: 100%; height: 1px; }
+.cell-corner--tr::before { top: 0; right: 0; width: 1px; height: 100%; }
+.cell-corner--bl::before { bottom: 0; left: 0; width: 100%; height: 1px; }
+.cell-corner--br::before { bottom: 0; right: 0; width: 1px; height: 100%; }
+
+.cell-corner:hover::before {
+  background: var(--color-edge-emphasis-hover);
+}
+
+/* Content: positioning anchor for stacked icon/arrow */
+.cell-corner__content {
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+/* Icon: absolute center, scales down + fades out on hover */
+.cell-corner__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  flex-shrink: 0;
+  opacity: var(--opacity-icon);
+  transition:
+    opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cell-corner:hover .cell-corner__icon:not(.cell-corner__icon--sun):not(.cell-corner__icon--moon) {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+/* Arrow: absolute center, scales up + fades in on hover with overshoot */
+.cell-corner__arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  flex-shrink: 0;
+  opacity: 0;
+  transition:
+    opacity 0.2s cubic-bezier(0.0, 0, 0.2, 1) 0.06s,
+    transform 0.35s cubic-bezier(0.34, 1.4, 0.64, 1) 0.06s;
+}
+
+.cell-corner:hover .cell-corner__arrow {
+  opacity: var(--opacity-arrow-hover);
+}
+
+/* Per-corner arrow rotation (points toward respective corner) */
+
+/* Top-Left: arrow points northwest */
+.cell-corner--tl .cell-corner__arrow {
+  transform: translate(-50%, -50%) scale(0.5) rotate(-90deg);
+}
+.cell-corner--tl:hover .cell-corner__arrow {
+  transform: translate(-50%, -50%) scale(1) rotate(-90deg);
+}
+
+/* Top-Right: arrow points northeast (SVG default) */
+.cell-corner--tr .cell-corner__arrow {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+.cell-corner--tr:hover .cell-corner__arrow {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Bottom-Left: arrow points southwest */
+.cell-corner--bl .cell-corner__arrow {
+  transform: translate(-50%, -50%) scale(0.5) rotate(-180deg);
+}
+.cell-corner--bl:hover .cell-corner__arrow {
+  transform: translate(-50%, -50%) scale(1) rotate(-180deg);
+}
+
+/* Bottom-Right: arrow points southeast */
+.cell-corner--br .cell-corner__arrow {
+  transform: translate(-50%, -50%) scale(0.5) rotate(90deg);
+}
+.cell-corner--br:hover .cell-corner__arrow {
+  transform: translate(-50%, -50%) scale(1) rotate(90deg);
+}
+
+/* Active states: push arrow slightly toward corner */
+.cell-corner:active .cell-corner__arrow {
+  transition-duration: 0.08s;
+}
+
+.cell-corner--tl:active .cell-corner__arrow {
+  transform: translate(calc(-50% - 2px), calc(-50% - 2px)) scale(1.05) rotate(-90deg);
+}
+.cell-corner--tr:active .cell-corner__arrow {
+  transform: translate(calc(-50% + 2px), calc(-50% - 2px)) scale(1.05);
+}
+.cell-corner--bl:active .cell-corner__arrow {
+  transform: translate(calc(-50% - 2px), calc(-50% + 2px)) scale(1.05) rotate(-180deg);
+}
+.cell-corner--br:active .cell-corner__arrow {
+  transform: translate(calc(-50% + 2px), calc(-50% + 2px)) scale(1.05) rotate(90deg);
+}
+
+/* --------------------------------------------------------------------------
+   Theme Toggle Icon Crossfade
+   On hover, the visible icon fades out + scales down while the hidden icon
+   fades in + scales up — previewing the theme that will apply on click.
+   -------------------------------------------------------------------------- */
+
+/* Base: shared positioning and transitions for both sun & moon */
+.cell-corner__icon--sun,
+.cell-corner__icon--moon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  flex-shrink: 0;
+  transition:
+    opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+/* ---- Light mode (default): moon visible, sun hidden ---- */
+[data-theme="light"] .cell-corner__icon--moon,
+:root:not([data-theme="dark"]) .cell-corner__icon--moon {
+  opacity: var(--opacity-icon);
+  transform: translate(-50%, -50%) scale(1);
+}
+
+[data-theme="light"] .cell-corner__icon--sun,
+:root:not([data-theme="dark"]) .cell-corner__icon--sun {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+  pointer-events: none;
+}
+
+/* Light hover: moon fades out + scales down, sun fades in + scales up */
+[data-theme="light"] .cell-corner--br:hover .cell-corner__icon--moon,
+:root:not([data-theme="dark"]) .cell-corner--br:hover .cell-corner__icon--moon {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+[data-theme="light"] .cell-corner--br:hover .cell-corner__icon--sun,
+:root:not([data-theme="dark"]) .cell-corner--br:hover .cell-corner__icon--sun {
+  opacity: var(--opacity-icon);
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto;
+}
+
+/* Light active: subtle scale bump on the incoming sun icon */
+[data-theme="light"] .cell-corner--br:active .cell-corner__icon--sun,
+:root:not([data-theme="dark"]) .cell-corner--br:active .cell-corner__icon--sun {
+  transform: translate(-50%, -50%) scale(1.05);
+  transition-duration: 0.08s;
+}
+
+/* ---- Dark mode: sun visible, moon hidden ---- */
+[data-theme="dark"] .cell-corner__icon--sun {
+  opacity: var(--opacity-icon);
+  transform: translate(-50%, -50%) scale(1);
+}
+
+[data-theme="dark"] .cell-corner__icon--moon {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+  pointer-events: none;
+}
+
+/* Dark hover: sun fades out + scales down, moon fades in + scales up */
+[data-theme="dark"] .cell-corner--br:hover .cell-corner__icon--sun {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+[data-theme="dark"] .cell-corner--br:hover .cell-corner__icon--moon {
+  opacity: var(--opacity-icon);
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto;
+}
+
+/* Dark active: subtle scale bump on the incoming moon icon */
+[data-theme="dark"] .cell-corner--br:active .cell-corner__icon--moon {
+  transform: translate(-50%, -50%) scale(1.05);
+  transition-duration: 0.08s;
+}
+
+/* Button reset for theme toggle */
+#theme-toggle {
+  background: none;
+  border: none;
+  font: inherit;
+  outline: none;
+}
+
+#theme-toggle:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: -2px;
+}
+
+/* Label: fade + slide-up reveal */
+.cell-corner__label {
+  position: absolute;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  transform: translateY(4px);
+  transition:
+    opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0.1s,
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1) 0.1s;
+}
+
+.cell-corner:hover .cell-corner__label {
+  opacity: var(--opacity-label);
+  transform: translateY(0);
+}
+
+/* Per-corner label positioning */
+.cell-corner--tl .cell-corner__label {
+  bottom: 16px;
+  left: 16px;
+}
+.cell-corner--tr .cell-corner__label {
+  bottom: 16px;
+  right: 16px;
+}
+.cell-corner--bl .cell-corner__label {
+  bottom: 16px;
+  left: 16px;
+}
+.cell-corner--br .cell-corner__label {
+  bottom: 16px;
+  right: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   Profile Card (center cell)
+   -------------------------------------------------------------------------- */
+.cell-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background-color: var(--color-profile-bg);
+}
+
+.cell-profile__inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  max-width: 520px;
+}
+
+.cell-profile__avatar {
+  width: 180px;
+  height: 180px;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--color-avatar-bg);
+}
+
+.cell-profile__avatar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    /* top-left corner */
+    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 0 / 14px 1px no-repeat,
+    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 0 / 1px 14px no-repeat,
+    /* top-right corner */
+    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 0 / 14px 1px no-repeat,
+    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 0 / 1px 14px no-repeat,
+    /* bottom-left corner */
+    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 100% / 14px 1px no-repeat,
+    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 100% / 1px 14px no-repeat,
+    /* bottom-right corner */
+    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 100% / 14px 1px no-repeat,
+    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 100% / 1px 14px no-repeat;
+  opacity: var(--opacity-crosshair);
+  transition: opacity 0.3s ease;
+}
+
+.cell-profile:hover .cell-profile__avatar::before {
+  opacity: 1;
+}
+
+.cell-profile__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(var(--img-grayscale)) contrast(var(--img-contrast));
+  transition:
+    filter 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.4s cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+.cell-profile:hover .cell-profile__img {
+  filter: grayscale(0%) contrast(1);
+  transform: scale(1.03);
+}
+
+.cell-profile__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cell-profile__name {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2em;
+  letter-spacing: 0.02em;
+}
+
+.cell-profile__title {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2em;
+  opacity: var(--opacity-title);
+}
+
+.cell-profile__bio {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5em;
+  opacity: var(--opacity-bio);
+  margin-top: 4px;
+  max-width: 260px;
+}
+
+.cell-profile__contact {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 8px;
+  opacity: var(--opacity-contact);
+  transition: opacity 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.cell-profile__contact:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive - Tablet (<=1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    overflow: auto;
+  }
+
+  .bento-grid {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 100px 1fr 100px;
+  }
+
+  .cell-profile__avatar {
+    width: 140px;
+    height: 140px;
+  }
+
+  .cell-profile__avatar::before {
+    background:
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 0 / 12px 1px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 0 / 1px 12px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 0 / 12px 1px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 0 / 1px 12px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 100% / 12px 1px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 100% / 1px 12px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 100% / 12px 1px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 100% / 1px 12px no-repeat;
+  }
+
+  .cell-profile__inner {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive - Mobile (<=600px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 600px) {
+  body {
+    overflow: auto;
+  }
+
+  .bento-grid {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    grid-template-columns: 80px 1fr 80px;
+    grid-template-rows: 80px 1fr 80px;
+  }
+
+  .cell-corner {
+    padding: 12px;
+  }
+
+  .cell-corner__label {
+    display: none;
+  }
+
+  .cell-profile {
+    padding: 20px;
+  }
+
+  .cell-profile__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .cell-profile__avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .cell-profile__avatar::before {
+    background:
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 0 / 10px 1px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 0 / 1px 10px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 0 / 10px 1px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 0 / 1px 10px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 100% / 10px 1px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 100% / 1px 10px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 100% / 10px 1px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 100% / 1px 10px no-repeat;
+  }
+
+  .cell-profile__info {
+    align-items: center;
+  }
+
+  .cell-profile__bio {
+    max-width: 280px;
+    text-align: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Theme Transitions
+   -------------------------------------------------------------------------- */
+html[data-theme] body,
+html[data-theme] .bento-grid,
+html[data-theme] .cell,
+html[data-theme] .cell-corner,
+html[data-theme] .cell-corner::before,
+html[data-theme] .cell-profile,
+html[data-theme] .cell-profile__avatar {
+  transition:
+    background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --------------------------------------------------------------------------
+   Reduced Motion
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .cell-corner__icon,
+  .cell-corner__arrow,
+  .cell-corner__label {
+    transition-duration: 0.01s !important;
+    transition-delay: 0s !important;
+  }
+
+  html[data-theme] body,
+  html[data-theme] .bento-grid,
+  html[data-theme] .cell,
+  html[data-theme] .cell-corner,
+  html[data-theme] .cell-corner::before,
+  html[data-theme] .cell-profile,
+  html[data-theme] .cell-profile__avatar {
+    transition-duration: 0.01s !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Utility
+   -------------------------------------------------------------------------- */
+::selection {
+  background-color: var(--color-selection-bg);
+  color: var(--color-selection-text);
+}

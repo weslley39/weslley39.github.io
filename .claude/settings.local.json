@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo:*)",
+      "WebFetch(domain:dss03.framer.website)",
+      "WebSearch",
+      "WebFetch(domain:joshcollinsworth.com)",
+      "Bash(git -C /Users/wneri/apps/weslley39.github.io diff HEAD -- styles/main.css)",
+      "WebFetch(domain:www.ctnicholas.dev)",
+      "WebFetch(domain:web.dev)",
+      "WebFetch(domain:mamutlove.com)"
+    ]
+  }
+}
