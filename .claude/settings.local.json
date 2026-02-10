@@ -4,7 +4,8 @@
       "Bash(echo:*)",
       "WebFetch(domain:dss03.framer.website)",
       "WebSearch",
-      "WebFetch(domain:joshcollinsworth.com)"
+      "WebFetch(domain:joshcollinsworth.com)",
+      "Bash(git -C /Users/wneri/apps/weslley39.github.io diff HEAD -- styles/main.css)"
     ]
   }
 }

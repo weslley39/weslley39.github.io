@@ -92,12 +92,16 @@ img {
 
 /* --------------------------------------------------------------------------
    Corner Cells - Shared
+   Animation: "Scale + Fade In-Place Swap"
+   On hover, the main icon fades out while scaling down; the arrow fades in
+   while scaling up — both centered in the exact same spot. Creates a
+   seamless "icon morphs into arrow" effect.
    -------------------------------------------------------------------------- */
 .cell-corner {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   padding: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -108,134 +112,158 @@ img {
   background-color: rgba(0, 0, 0, 0.025);
 }
 
-.cell-corner__content {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
+/* Active: deeper press feedback */
+.cell-corner:active {
+  background-color: rgba(0, 0, 0, 0.05);
+  transition: background-color 0.08s ease;
 }
 
+/* Corner edge emphasis line */
+.cell-corner::before {
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.06);
+  transition: background 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 1;
+}
+
+.cell-corner--tl::before { top: 0; left: 0; width: 100%; height: 1px; }
+.cell-corner--tr::before { top: 0; right: 0; width: 1px; height: 100%; }
+.cell-corner--bl::before { bottom: 0; left: 0; width: 100%; height: 1px; }
+.cell-corner--br::before { bottom: 0; right: 0; width: 1px; height: 100%; }
+
+.cell-corner:hover::before {
+  background: rgba(0, 0, 0, 0.18);
+}
+
+/* Content: positioning anchor for stacked icon/arrow */
+.cell-corner__content {
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+/* Icon: absolute center, scales down + fades out on hover */
 .cell-corner__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
   flex-shrink: 0;
   opacity: 0.6;
-  transition: opacity 0.3s ease;
+  transition:
+    opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cell-corner:hover .cell-corner__icon {
-  opacity: 1;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
 }
 
-/* --- Arrow: hidden by default, revealed on hover --- */
+/* Arrow: absolute center, scales up + fades in on hover with overshoot */
 .cell-corner__arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   flex-shrink: 0;
   opacity: 0;
   transition:
-    opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity 0.2s cubic-bezier(0.0, 0, 0.2, 1) 0.06s,
+    transform 0.35s cubic-bezier(0.34, 1.4, 0.64, 1) 0.06s;
 }
 
 .cell-corner:hover .cell-corner__arrow {
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
+/* Per-corner arrow rotation (points toward respective corner) */
+
+/* Top-Left: arrow points northwest */
+.cell-corner--tl .cell-corner__arrow {
+  transform: translate(-50%, -50%) scale(0.5) rotate(-90deg);
+}
+.cell-corner--tl:hover .cell-corner__arrow {
+  transform: translate(-50%, -50%) scale(1) rotate(-90deg);
+}
+
+/* Top-Right: arrow points northeast (SVG default) */
+.cell-corner--tr .cell-corner__arrow {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+.cell-corner--tr:hover .cell-corner__arrow {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Bottom-Left: arrow points southwest */
+.cell-corner--bl .cell-corner__arrow {
+  transform: translate(-50%, -50%) scale(0.5) rotate(-180deg);
+}
+.cell-corner--bl:hover .cell-corner__arrow {
+  transform: translate(-50%, -50%) scale(1) rotate(-180deg);
+}
+
+/* Bottom-Right: arrow points southeast */
+.cell-corner--br .cell-corner__arrow {
+  transform: translate(-50%, -50%) scale(0.5) rotate(90deg);
+}
+.cell-corner--br:hover .cell-corner__arrow {
+  transform: translate(-50%, -50%) scale(1) rotate(90deg);
+}
+
+/* Active states: push arrow slightly toward corner */
+.cell-corner:active .cell-corner__arrow {
+  transition-duration: 0.08s;
+}
+
+.cell-corner--tl:active .cell-corner__arrow {
+  transform: translate(calc(-50% - 2px), calc(-50% - 2px)) scale(1.05) rotate(-90deg);
+}
+.cell-corner--tr:active .cell-corner__arrow {
+  transform: translate(calc(-50% + 2px), calc(-50% - 2px)) scale(1.05);
+}
+.cell-corner--bl:active .cell-corner__arrow {
+  transform: translate(calc(-50% - 2px), calc(-50% + 2px)) scale(1.05) rotate(-180deg);
+}
+.cell-corner--br:active .cell-corner__arrow {
+  transform: translate(calc(-50% + 2px), calc(-50% + 2px)) scale(1.05) rotate(90deg);
+}
+
+/* Label: fade + slide-up reveal */
 .cell-corner__label {
+  position: absolute;
   font-size: 12px;
   font-weight: 400;
-  opacity: 0.5;
+  opacity: 0;
   letter-spacing: 0.02em;
-  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  transform: translateY(4px);
+  transition:
+    opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0.1s,
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1) 0.1s;
 }
 
 .cell-corner:hover .cell-corner__label {
-  opacity: 0.8;
+  opacity: 0.7;
+  transform: translateY(0);
 }
 
-/* --- Top-Left: GitHub --- */
-.cell-corner--tl .cell-corner__content {
-  justify-content: flex-start;
+/* Per-corner label positioning */
+.cell-corner--tl .cell-corner__label {
+  bottom: 16px;
+  left: 16px;
 }
-
-.cell-corner--tl .cell-corner__arrow {
-  transform: rotate(-90deg) translate(-4px, 0);
-  margin-left: auto;
-}
-
-.cell-corner--tl:hover .cell-corner__arrow {
-  transform: rotate(-90deg) translate(3px, 0);
-}
-
-/* --- Top-Right: LinkedIn --- */
-.cell-corner--tr {
-  align-items: flex-end;
-  text-align: right;
-}
-
-.cell-corner--tr .cell-corner__content {
-  justify-content: flex-end;
-}
-
-.cell-corner--tr .cell-corner__arrow {
-  transform: translate(-4px, 4px);
-}
-
-.cell-corner--tr:hover .cell-corner__arrow {
-  transform: translate(3px, -3px);
-}
-
 .cell-corner--tr .cell-corner__label {
-  text-align: right;
+  bottom: 16px;
+  right: 16px;
 }
-
-/* --- Bottom-Left: Placeholder --- */
-.cell-corner--bl {
-  justify-content: flex-end;
+.cell-corner--bl .cell-corner__label {
+  bottom: 16px;
+  left: 16px;
 }
-
-.cell-corner--bl .cell-corner__content {
-  justify-content: flex-start;
-}
-
-.cell-corner--bl .cell-corner__arrow {
-  transform: rotate(-180deg) translate(-4px, 0);
-  margin-left: auto;
-}
-
-.cell-corner--bl:hover .cell-corner__arrow {
-  transform: rotate(-180deg) translate(3px, -3px);
-}
-
-.cell-corner--bl .cell-corner__icon {
-  opacity: 0.3;
-}
-
-.cell-corner--bl:hover .cell-corner__icon {
-  opacity: 0.6;
-}
-
-/* --- Bottom-Right: Placeholder --- */
-.cell-corner--br {
-  align-items: flex-end;
-  justify-content: flex-end;
-}
-
-.cell-corner--br .cell-corner__content {
-  justify-content: flex-end;
-}
-
-.cell-corner--br .cell-corner__arrow {
-  transform: rotate(90deg) translate(-4px, 0);
-}
-
-.cell-corner--br:hover .cell-corner__arrow {
-  transform: rotate(90deg) translate(3px, 0);
-}
-
-.cell-corner--br .cell-corner__icon {
-  opacity: 0.3;
-}
-
-.cell-corner--br:hover .cell-corner__icon {
-  opacity: 0.6;
+.cell-corner--br .cell-corner__label {
+  bottom: 16px;
+  right: 16px;
 }
 
 /* --------------------------------------------------------------------------
@@ -397,14 +425,17 @@ img {
     max-width: 280px;
     text-align: center;
   }
+}
 
-  /* Normalize corner alignment on mobile */
-  .cell-corner--tr {
-    align-items: flex-end;
-  }
-
-  .cell-corner--br {
-    align-items: flex-end;
+/* --------------------------------------------------------------------------
+   Reduced Motion
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .cell-corner__icon,
+  .cell-corner__arrow,
+  .cell-corner__label {
+    transition-duration: 0.01s !important;
+    transition-delay: 0s !important;
   }
 }
 
