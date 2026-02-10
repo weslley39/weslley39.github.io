@@ -55,7 +55,7 @@
   --color-bg: #0e0e10;
   --color-text: #e8e6e3;
 
-  --color-border: rgba(255, 255, 255, 0.10);
+  --color-border: rgba(255, 255, 255, 0.1);
   --color-edge-emphasis: rgba(255, 255, 255, 0.05);
   --color-edge-emphasis-hover: rgba(255, 255, 255, 0.14);
 
@@ -92,7 +92,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -104,7 +105,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.3em;
@@ -198,17 +199,37 @@ img {
 
 /* Corner edge emphasis line */
 .cell-corner::before {
-  content: '';
+  content: "";
   position: absolute;
   background: var(--color-edge-emphasis);
   transition: background 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   z-index: 1;
 }
 
-.cell-corner--tl::before { top: 0; left: 0; width: 100%; height: 1px; }
-.cell-corner--tr::before { top: 0; right: 0; width: 1px; height: 100%; }
-.cell-corner--bl::before { bottom: 0; left: 0; width: 100%; height: 1px; }
-.cell-corner--br::before { bottom: 0; right: 0; width: 1px; height: 100%; }
+.cell-corner--tl::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+.cell-corner--tr::before {
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+}
+.cell-corner--bl::before {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+.cell-corner--br::before {
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+}
 
 .cell-corner:hover::before {
   background: var(--color-edge-emphasis-hover);
@@ -234,7 +255,10 @@ img {
     transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.cell-corner:hover .cell-corner__icon:not(.cell-corner__icon--sun):not(.cell-corner__icon--moon) {
+.cell-corner:hover
+  .cell-corner__icon:not(.cell-corner__icon--sun):not(
+    .cell-corner__icon--moon
+  ) {
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.8);
 }
@@ -247,7 +271,7 @@ img {
   flex-shrink: 0;
   opacity: 0;
   transition:
-    opacity 0.2s cubic-bezier(0.0, 0, 0.2, 1) 0.06s,
+    opacity 0.2s cubic-bezier(0, 0, 0.2, 1) 0.06s,
     transform 0.35s cubic-bezier(0.34, 1.4, 0.64, 1) 0.06s;
 }
 
@@ -295,16 +319,19 @@ img {
 }
 
 .cell-corner--tl:active .cell-corner__arrow {
-  transform: translate(calc(-50% - 2px), calc(-50% - 2px)) scale(1.05) rotate(-90deg);
+  transform: translate(calc(-50% - 2px), calc(-50% - 2px)) scale(1.05)
+    rotate(-90deg);
 }
 .cell-corner--tr:active .cell-corner__arrow {
   transform: translate(calc(-50% + 2px), calc(-50% - 2px)) scale(1.05);
 }
 .cell-corner--bl:active .cell-corner__arrow {
-  transform: translate(calc(-50% - 2px), calc(-50% + 2px)) scale(1.05) rotate(-180deg);
+  transform: translate(calc(-50% - 2px), calc(-50% + 2px)) scale(1.05)
+    rotate(-180deg);
 }
 .cell-corner--br:active .cell-corner__arrow {
-  transform: translate(calc(-50% + 2px), calc(-50% + 2px)) scale(1.05) rotate(90deg);
+  transform: translate(calc(-50% + 2px), calc(-50% + 2px)) scale(1.05)
+    rotate(90deg);
 }
 
 /* --------------------------------------------------------------------------
@@ -468,24 +495,32 @@ img {
 }
 
 .cell-profile__avatar::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
   background:
     /* top-left corner */
-    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 0 / 14px 1px no-repeat,
-    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 0 / 1px 14px no-repeat,
+    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 0 / 14px
+      1px no-repeat,
+    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 0 / 1px
+      14px no-repeat,
     /* top-right corner */
-    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 0 / 14px 1px no-repeat,
-    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 0 / 1px 14px no-repeat,
+    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 0 /
+      14px 1px no-repeat,
+    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 0 / 1px
+      14px no-repeat,
     /* bottom-left corner */
-    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 100% / 14px 1px no-repeat,
-    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 100% / 1px 14px no-repeat,
+    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 100% /
+      14px 1px no-repeat,
+    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 100% / 1px
+      14px no-repeat,
     /* bottom-right corner */
-    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 100% / 14px 1px no-repeat,
-    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 100% / 1px 14px no-repeat;
+    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 100% /
+      14px 1px no-repeat,
+    linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 100% /
+      1px 14px no-repeat;
   opacity: var(--opacity-crosshair);
   transition: opacity 0.3s ease;
 }
@@ -577,14 +612,22 @@ img {
 
   .cell-profile__avatar::before {
     background:
-      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 0 / 12px 1px no-repeat,
-      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 0 / 1px 12px no-repeat,
-      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 0 / 12px 1px no-repeat,
-      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 0 / 1px 12px no-repeat,
-      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 100% / 12px 1px no-repeat,
-      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 100% / 1px 12px no-repeat,
-      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 100% / 12px 1px no-repeat,
-      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 100% / 1px 12px no-repeat;
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 0 / 12px
+        1px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 0 / 1px
+        12px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 0 /
+        12px 1px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 0 /
+        1px 12px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 100% /
+        12px 1px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 100% /
+        1px 12px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100%
+        100% / 12px 1px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100%
+        100% / 1px 12px no-repeat;
   }
 
   .cell-profile__inner {
@@ -636,14 +679,22 @@ img {
 
   .cell-profile__avatar::before {
     background:
-      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 0 / 10px 1px no-repeat,
-      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 0 / 1px 10px no-repeat,
-      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 0 / 10px 1px no-repeat,
-      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 0 / 1px 10px no-repeat,
-      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 100% / 10px 1px no-repeat,
-      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 100% / 1px 10px no-repeat,
-      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 100% / 10px 1px no-repeat,
-      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 100% / 1px 10px no-repeat;
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 0 / 10px
+        1px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 0 / 1px
+        10px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 0 /
+        10px 1px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100% 0 /
+        1px 10px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 100% /
+        10px 1px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 0 100% /
+        1px 10px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100%
+        100% / 10px 1px no-repeat,
+      linear-gradient(var(--color-crosshair), var(--color-crosshair)) 100%
+        100% / 1px 10px no-repeat;
   }
 
   .cell-profile__info {
